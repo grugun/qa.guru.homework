@@ -7,7 +7,7 @@ import org.openqa.selenium.Keys;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DemoqaFormTestCase {
+public class DemoqaFormTest {
     @BeforeAll
     static void beforeTestSuit() {
         Configuration.browserSize = "1920x1080";
