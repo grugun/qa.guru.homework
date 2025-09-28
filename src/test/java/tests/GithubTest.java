@@ -1,13 +1,10 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class GithubTest {
@@ -26,7 +23,6 @@ public class GithubTest {
         $("#wiki-tab").click();
         $("#wiki-content").shouldHave(text("Soft assertions"));
         $("a[href='/selenide/selenide/wiki/SoftAssertions']").click();
-        ;
 
         $("#wiki-body").shouldHave(text("""
                 @ExtendWith({SoftAssertsExtension.class})
@@ -39,7 +35,7 @@ public class GithubTest {
                         $("#first").should(visible).click();
                         $("#second").should(visible).click();
                     }
-                } 
+                }
                 """));
     }
 

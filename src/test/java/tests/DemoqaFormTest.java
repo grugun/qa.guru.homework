@@ -29,7 +29,7 @@ public class DemoqaFormTest {
         $(by("id", "userEmail")).setValue("IlyaNot@mail.ru");
         $(byText("Male")).click();
         $x("//input[@id='userNumber']").setValue("79772621133");
-        setDateOfBirth("04 Feb 2025");
+        setDateOfBirth();
         $(byId("subjectsInput")).setValue("someSubject");
         $(byText("Sports")).click();
         $(byId("uploadPicture")).uploadFromClasspath("files/picture.jpg");
@@ -41,11 +41,11 @@ public class DemoqaFormTest {
     }
 
 
-    private void setDateOfBirth(String date) {
+    private void setDateOfBirth() {
         SelenideElement el = $("#dateOfBirthInput");
         el.click();
         el.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-        el.sendKeys(date);
+        el.sendKeys("04 Feb 2025");
         el.sendKeys(Keys.ENTER);
     }
 }
